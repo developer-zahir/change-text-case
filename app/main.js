@@ -27,7 +27,7 @@ text_con_btn.forEach((item, index) => {
     if (item.value == "capitalize") {
       let text_to_word = textarea.value.split(" ");
       for (let i = 0; i < text_to_word.length; i++) {
-        text_to_word[i] = text_to_word[i].charAt(0).toUpperCase() + text_to_word[i].slice(1);
+        text_to_word[i] = text_to_word[i].charAt(0).toUpperCase() + text_to_word[i].toLowerCase().slice(1);
       }
       output.innerText = text_to_word.join(" ");
     } else if (item.value == "uppercase") {
