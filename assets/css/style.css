@@ -1,0 +1,151 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  height: calc(100vh - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.box {
+  max-width: 1000px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.box .input_group h1 {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px !important;
+}
+.box .input_group p {
+  font-size: 15px;
+  text-align: left;
+  color: #555;
+  line-height: 30px;
+}
+.box .input_group textarea {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background-color: rgba(163, 201, 223, 0.082);
+
+  width: 100%;
+  outline: unset;
+  box-sizing: border-box;
+  overflow: hidden;
+  resize: none;
+  height: 150px;
+  transition: 0.4s;
+}
+textarea:focus {
+  border-color: green;
+}
+.output {
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background-color: rgba(163, 201, 223, 0.096);
+  padding: 10px;
+  text-align-last: left;
+  height: 250px;
+}
+/* dd */
+div.container {
+  margin-top: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+span {
+  text-align: left;
+  font-weight: 600;
+  margin: 8px 0 -4px 0;
+  margin: 0 10px;
+}
+span:first-child {
+  margin-left: 0;
+}
+i {
+  font-weight: normal;
+  font-style: normal;
+}
+/* ---------- */
+.right button {
+  border: unset;
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  margin: 0 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.right button:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  text-align: left;
+  display: flex;
+}
+.footer button {
+  border: unset;
+  background-color: black;
+  color: white;
+  padding: 13px 40px;
+  margin: 0 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 33.33%;
+}
+.footer button:hover {
+  opacity: 0.8;
+}
+
+.footer button.reload {
+  background: teal !important;
+}
+.footer button.clear {
+  background: rgb(145, 56, 40);
+}
+
+/* cursor not allow */
+.not-allow {
+  cursor: not-allowed;
+  background: red;
+}
+
+@media only screen and (max-width: 930px) {
+  body {
+    height: unset;
+    overflow-x: hidden;
+  }
+  .box {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .cs {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer button {
+    width: 100%;
+    margin: 3px 0;
+  }
+}

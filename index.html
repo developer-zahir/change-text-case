@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHANGE TEXT CASE</title>
+    <!-- all css files -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  
+  </head>
+  <body>
+    <aside>
+
+    </aside>
+    <main>
+      <div class="box">
+        <!-- input group -->
+        <div class="input_group">
+          <h1>CHANGE TEXT CASE</h1>
+          <p>
+            Change Text Case is a handy web application that enables you to change the text case of any given text. Simply copy and paste the text into the text
+            area below and click the required text case.
+          </p>
+          <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <!--  -->
+        <div class="container">
+          <div class="left">
+            <span class="cs">Cursor status: <i>Default</i></span>
+            <span class="ch">Characters: <i>0</i></span>
+            <span class="wo">Words: <i>0</i></span>
+          </div>
+          <div class="right">
+            <button class="capitalize" value="capitalize">Capitalize</button>
+            <button class="uppercase" value="uppercase">Uppercase</button>
+            <button class="lowercase" value="lowercase">Lowercase</button>
+          </div>
+        </div>
+
+        <p class="output">Show data</p>
+        <div class="footer">
+          <button class="cpt_clipboard">Copy to clipboard</button>
+          <button class="clear">Clear all</button>
+          <button class="reload">Reload browser</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- all js files -->
+    <script src="./app/data.js"></script>
+    <script src="./app/functions.js"></script>
+    <script src="./app/main.js"></script>
+  </body>
+</html>
