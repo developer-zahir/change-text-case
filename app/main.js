@@ -16,7 +16,7 @@ textarea.addEventListener("input", function () {
   output.innerHTML = input_value;
 
   // word and characters counter --------
-  ch_count.innerHTML = input_value.trim.length;
+  ch_count.innerHTML = input_value.trim().length;
   const words = input_value.trim().split(/\s+/);
   wo_count.innerHTML = words.length;
 });
