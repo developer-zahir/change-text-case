@@ -65,12 +65,37 @@ all_clear.onclick = () => {
   textarea.value = "";
   output.innerText = "";
   wo_count.innerText = 0;
+  all_clear.innerText = "Cleared all data";
 };
 
 // reload browser ----
 
 reload.onclick = () => {
   location.reload();
+  reload.innerText = `Reload done`;
 };
 
-let red = 'red'
+//  theme switcher
+const theme_switcher = document.querySelector(".theme-switcher");
+const html = document.querySelector("html");
+let dark;
+
+// Retrieve the saved theme from localStorage
+if (localStorage.getItem("dark")) {
+  dark = JSON.parse(localStorage.getItem("dark"));
+  if (dark) {
+    html.classList.add("dark-theme");
+  } else {
+    html.classList.remove("dark-theme");
+  }
+}
+
+theme_switcher.onclick = () => {
+  dark = !dark; // Toggle the theme state
+
+  // Toggle the 'dark-theme' class on the 'html' element
+  html.classList.toggle("dark-theme");
+
+  // Save the updated theme state to localStorage
+  localStorage.setItem("dark", JSON.stringify(dark));
+};

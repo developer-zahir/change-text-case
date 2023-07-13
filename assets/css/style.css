@@ -1,39 +1,64 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+:root {
+  --border-color: #ddd;
+  --white: white;
+  --black: black;
+  --green: green;
+  --teal: teal;
+  --btn-2: rgb(145, 56, 40);
+  --paragraph: #555;
+  --body: white;
+}
+.dark-theme {
+  --border-color: #dddddd57;
+  --white: #011627;
+  --black: white;
+  --green: teal;
+  --teal: teal;
+  --btn-2: rgb(145, 56, 40);
+  --paragraph: #f3f3f3;
+}
+
+
 body {
   height: calc(100vh - 20px);
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
+  background: var(--white);
+  overflow-x: hidden;
 }
 .box {
   max-width: 1000px;
   display: inline-block;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
+  background: var(--white);
   padding: 50px 30px;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 3px;
 }
 
 .box .input_group h1 {
   text-align: left;
   display: block;
   margin-bottom: 10px !important;
+  color: var(--black);
 }
 .box .input_group p {
   font-size: 15px;
   text-align: left;
-  color: #555;
+  color: var(--paragraph);
   line-height: 30px;
 }
 .box .input_group textarea {
   padding: 10px;
   border-radius: 3px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   background-color: rgba(163, 201, 223, 0.082);
-
+  color: var(--black);
   width: 100%;
   outline: unset;
   box-sizing: border-box;
@@ -41,14 +66,17 @@ body {
   resize: none;
   height: 150px;
   transition: 0.4s;
+  position: relative;
 }
 textarea:focus {
-  border-color: green;
+  border-color: var(--green);
 }
 .output {
   border-radius: 3px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   background-color: rgba(163, 201, 223, 0.096);
+  color: var(--black);
+
   padding: 10px;
   text-align-last: left;
   height: 250px;
@@ -60,7 +88,7 @@ div.container {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   padding: 10px;
 }
 
@@ -69,6 +97,7 @@ span {
   font-weight: 600;
   margin: 8px 0 -4px 0;
   margin: 0 10px;
+  color: var(--black);
 }
 span:first-child {
   margin-left: 0;
@@ -80,8 +109,8 @@ i {
 /* ---------- */
 .right button {
   border: unset;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   padding: 5px 15px;
   margin: 0 4px;
   border-radius: 2px;
@@ -98,8 +127,8 @@ i {
 }
 .footer button {
   border: unset;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   padding: 13px 40px;
   margin: 0 4px;
   border-radius: 2px;
@@ -112,16 +141,12 @@ i {
 }
 
 .footer button.reload {
-  background: teal !important;
+  background: var(--teal) !important;
+  color: var(--black);
 }
 .footer button.clear {
-  background: rgb(145, 56, 40);
-}
-
-/* cursor not allow */
-.not-allow {
-  cursor: not-allowed;
-  background: red;
+  background: var(--btn-2);
+  color: var(--black);
 }
 
 @media only screen and (max-width: 930px) {
@@ -148,4 +173,26 @@ i {
     width: 100%;
     margin: 3px 0;
   }
+}
+
+/* theme switcher  */
+
+.theme-switcher {
+  font-size: 35px;
+  padding: 3px 20px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: unset;
+  position: absolute;
+  top: 300px;
+  left: 0;
+  height: 55px;
+  line-height: 45px;
+  transition: 0.4s;
+  z-index: 999;
+}
+.theme-switcher:hover {
+  background-color: var(--green);
+  color: var(--white);
+  cursor: pointer;
 }
