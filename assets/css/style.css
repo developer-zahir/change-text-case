@@ -142,11 +142,11 @@ i {
 
 .footer button.reload {
   background: var(--teal) !important;
-  color: var(--black);
+  color: #fff;
 }
 .footer button.clear {
   background: var(--btn-2);
-  color: var(--black);
+  color:#fff;
 }
 
 @media only screen and (max-width: 930px) {
