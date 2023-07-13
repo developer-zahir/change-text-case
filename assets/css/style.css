@@ -21,7 +21,6 @@
   --paragraph: #f3f3f3;
 }
 
-
 body {
   height: calc(100vh - 20px);
   display: flex;
@@ -146,7 +145,7 @@ i {
 }
 .footer button.clear {
   background: var(--btn-2);
-  color:#fff;
+  color: #fff;
 }
 
 @media only screen and (max-width: 930px) {
@@ -195,4 +194,13 @@ i {
   background-color: var(--green);
   color: var(--white);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 930px) {
+  .theme-switcher {
+    padding: 10px;
+    line-height: 20px;
+    top: 600px;
+    position: fixed;
+  }
 }
