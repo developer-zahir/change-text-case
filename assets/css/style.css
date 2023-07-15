@@ -16,6 +16,7 @@ body {
   height: calc(100vh - 20px);
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   background: var(--white);
   overflow-x: hidden;
@@ -143,6 +144,7 @@ i {
   body {
     height: unset;
     overflow-x: hidden;
+    align-items: flex-start;
   }
   .box {
     max-width: 100%;
