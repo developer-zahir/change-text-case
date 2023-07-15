@@ -11,15 +11,6 @@
   --paragraph: #555;
   --body: white;
 }
-.dark-theme {
-  --border-color: #dddddd57;
-  --white: #011627;
-  --black: white;
-  --green: teal;
-  --teal: teal;
-  --btn-2: rgb(145, 56, 40);
-  --paragraph: #f3f3f3;
-}
 
 body {
   height: calc(100vh - 20px);
@@ -174,33 +165,4 @@ i {
   }
 }
 
-/* theme switcher  */
 
-.theme-switcher {
-  font-size: 35px;
-  padding: 3px 20px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border: unset;
-  position: absolute;
-  top: 300px;
-  left: 0;
-  height: 55px;
-  line-height: 45px;
-  transition: 0.4s;
-  z-index: 999;
-}
-.theme-switcher:hover {
-  background-color: var(--green);
-  color: var(--white);
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 930px) {
-  .theme-switcher {
-    padding: 10px;
-    line-height: 20px;
-    top: 600px;
-    position: fixed;
-  }
-}
