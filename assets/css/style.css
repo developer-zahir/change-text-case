@@ -77,6 +77,10 @@ div.container {
   padding: 10px;
 }
 
+.output{
+  line-height: 23px;
+}
+
 span {
   text-align: left;
   font-weight: 600;
