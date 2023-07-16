@@ -46,8 +46,9 @@ body {
   text-align: left;
   color: var(--paragraph);
   line-height: 30px;
+  margin-bottom: 0;
 }
-.box .input_group textarea {
+.box .input_group textarea, textarea {
   padding: 10px;
   border-radius: 3px;
   border: 1px solid var(--border-color);
@@ -62,9 +63,7 @@ body {
   overflow-y: scroll;
   transition: 0.4s;
   position: relative;
-}
-textarea:focus {
-  border-color: var(--green);
+  margin: 15px 0;
 }
 .output {
   border-radius: 3px;
@@ -80,7 +79,7 @@ textarea:focus {
 }
 /* dd */
 div.container {
-  margin-top: 13px;
+  margin-top: -3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
