@@ -65,18 +65,7 @@ body {
   position: relative;
   margin: 15px 0;
 }
-.output {
-  border-radius: 3px;
-  border: 1px solid var(--border-color);
-  background-color: rgba(163, 201, 223, 0.096);
-  color: var(--black);
-  padding: 10px;
-  text-align-last: left;
-  height: 250px;
-  overflow-y: scroll;
-  font-size: 14px;
-  line-height: 30px;
-}
+
 /* dd */
 div.container {
   margin-top: -3px;
