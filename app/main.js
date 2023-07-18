@@ -7,6 +7,7 @@ const text_con_btn = document.querySelectorAll(".right button");
 const cpt_clipboard_btn = document.querySelector(".cpt_clipboard");
 const all_clear = document.querySelector(".clear");
 const reload = document.querySelector(".reload");
+const body = document.querySelector("body");
 // all selector end -------------------------------------------------
 
 // input field to output value ------------
@@ -52,14 +53,19 @@ textarea.onblur = () => {
 
 // click to copy ----------
 cpt_clipboard_btn.onclick = () => {
-  const text_for_copy = output.innerText.trim();
+  const text_for_copy = output.value.trim();
   if (text_for_copy) {
     navigator.clipboard.writeText(text_for_copy).then(() => {
       cpt_clipboard_btn.innerText = `Text copied to clipboard!`;
+      cpt_clipboard_btn.style.background = "green";
     });
   }
 };
+body.onclick = () => {
+  cpt_clipboard_btn.innerText = `Copy to clipboard`;
+  cpt_clipboard_btn.style.background = "black";
 
+};
 // clear all data ---------
 all_clear.onclick = () => {
   textarea.value = "";
@@ -74,4 +80,3 @@ reload.onclick = () => {
   location.reload();
   reload.innerText = `Reload done`;
 };
-
